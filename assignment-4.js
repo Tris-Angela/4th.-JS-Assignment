@@ -45,3 +45,21 @@ function isLGSeven(input){
     }
 }
 console.log(isLGSeven(6));
+
+
+// problem-4 solving
+
+function findingBadData(arrayOfNumbers){
+    const badData = [];
+    for(let i = 0; i < arrayOfNumbers.length; i++){
+        const dataPosition = i;
+        const  dataValues = arrayOfNumbers[dataPosition];
+        if(dataValues < 0){
+            badData.push(dataValues);
+        } 
+    }return badData.length;
+}
+let arrayInputs =  [ 90, -9, -5, -33, -55 ];
+console.log(findingBadData(arrayInputs));
+
+
