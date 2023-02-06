@@ -44,7 +44,12 @@ function isLGSeven(input){
         return value;
     }
 }
-console.log(isLGSeven(6));
+const value1 = isLGSeven(6);
+console.log(value1)
+const value2 = isLGSeven(-15);
+console.log(value2)
+const value3 = isLGSeven(15);
+console.log(value3)
 
 
 // problem-4 solving
@@ -59,7 +64,33 @@ function findingBadData(arrayOfNumbers){
         } 
     }return badData.length;
 }
-let arrayInputs =  [ 90, -9, -5, -33, -55 ];
-console.log(findingBadData(arrayInputs));
+const array1 = findingBadData([ 1,2,5 ]);
+console.log(array1);
+const array2 = findingBadData([ 2, -5, -7, -13 ]);
+console.log(array2);
+const array3 = findingBadData([ -4, -9, -5, -33, -55 ]);
+console.log(array3);
 
+// problem-5 solving
 
+function gemsToDiamond(quantity1, quantity2, quantity3){
+    const firstFriendsGem = quantity1*21;
+    const secondFriendsGem = quantity2*32;
+    const thirdFriendsGem = quantity3*43;
+    
+    const totalDiamonds = firstFriendsGem + secondFriendsGem + thirdFriendsGem;
+    const diamond = totalDiamonds - 2000;
+    if(totalDiamonds < 1000*2){
+        return totalDiamonds;
+    }
+    else(totalDiamonds >= 1000*2)
+        
+        return diamond;
+
+}
+const gemsQuantity1 = gemsToDiamond(1, 1, 1);
+console.log(gemsQuantity1);
+const gemsQuantity2 = gemsToDiamond(20, 200, 50);
+console.log(gemsQuantity2);
+const gemsQuantity3 = gemsToDiamond(100, 5, 1);
+console.log(gemsQuantity3);
