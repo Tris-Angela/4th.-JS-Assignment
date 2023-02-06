@@ -10,3 +10,22 @@ function mindGame(numbers){
 }
 let input = mindGame(33);
 console.log(input);
+
+
+// problem-2 solving
+
+function evenOdd(words){
+    let totalCharacter = words.length;
+    const remainder = totalCharacter % 2;
+    if(typeof words != 'string'){
+        console.log('error: please insert only string');
+    }
+    else if(remainder === 0){
+        console.log('even');
+    }
+    else{
+        console.log('odd');
+    }
+    return;
+}
+evenOdd(45);
