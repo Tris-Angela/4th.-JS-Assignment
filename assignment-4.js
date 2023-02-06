@@ -29,3 +29,19 @@ function evenOdd(words){
     return;
 }
 evenOdd(45);
+
+// problem-3 solving
+function isLGSeven(input){
+    const value = input - 7;
+    const double = input*2;
+    if(typeof input != 'number'){
+        console.log('error: please insert a number');
+    }
+    else if(value >= 7){
+        return double;
+    }
+    else{
+        return value;
+    }
+}
+console.log(isLGSeven(6));
