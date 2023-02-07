@@ -14,12 +14,6 @@ function mindGame(numbers){
 }
 // let chosenNumber = mindGame(50);
 // console.log(chosenNumber);
-// let input1 = mindGame();
-// console.log(input1);
-// let input2 = mindGame();
-// console.log(input2);
-// let input3 = mindGame();
-// console.log(input3);
 
 
 // // problem-2 is said to put string as input so that the total number of character in the string can be find as even or odd Or if the input is not valid will give an error.
