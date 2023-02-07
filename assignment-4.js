@@ -1,41 +1,52 @@
-// Problem-1 solving
+// Problem-1 is required to provide a number which will be responsively multiplied by 3, addition by 10, divided by 2 and then 2 will be subtracted. If the input is not valid will give an error otherwise subtraction will return as output.
 
 function mindGame(numbers){
-    let theMultiply = numbers*3;
-    let additionToMultiply = theMultiply + 10;
-    let divisionOfAddition = additionToMultiply / 2;
-    let subtraction = divisionOfAddition - 5;
-
-    return subtraction;
+    const theMultiply = numbers*3;
+    const additionToMultiply = theMultiply + 10;
+    const divisionOfAddition = additionToMultiply / 2;
+    const subtraction = divisionOfAddition - 5;
+    if(typeof numbers != 'number'){
+        return 'ERROR: please insert a number';
+    }
+    else{
+        return subtraction;
+    }
 }
-let input = mindGame(33);
-console.log(input);
+// let chosenNumber = mindGame(50);
+// console.log(chosenNumber);
+// let input1 = mindGame();
+// console.log(input1);
+// let input2 = mindGame();
+// console.log(input2);
+// let input3 = mindGame();
+// console.log(input3);
 
 
-// problem-2 solving
+// // problem-2 is said to put string as input so that the total number of character in the string can be find as even or odd Or if the input is not valid will give an error.
 
 function evenOdd(words){
     let totalCharacter = words.length;
     const remainder = totalCharacter % 2;
     if(typeof words != 'string'){
-        console.log('error: please insert only string');
+        return 'ERROR: please insert only string';
     }
     else if(remainder === 0){
-        console.log('even');
+        return 'even';
     }
     else{
-        console.log('odd');
+        return 'odd';
     }
-    return;
 }
-evenOdd(45);
+// const text = evenOdd('wow');
+// console.log(text);
 
-// problem-3 solving
+// In this problem-3, a number is subtracted by 7 and if the subtraction value less than 7 function will return the value, If it is greater or equals to 7 then function will return the input as doubled or if the input is not valid will give an error.
+
 function isLGSeven(input){
     const value = input - 7;
     const double = input*2;
     if(typeof input != 'number'){
-        console.log('error: please insert a number');
+        return 'ERROR: please insert a number';
     }
     else if(value >= 7){
         return double;
@@ -44,34 +55,32 @@ function isLGSeven(input){
         return value;
     }
 }
-const value1 = isLGSeven(6);
-console.log(value1)
-const value2 = isLGSeven(-15);
-console.log(value2)
-const value3 = isLGSeven(15);
-console.log(value3)
+// const inputNumber = isLGSeven(20);
+// console.log(inputNumber);
 
 
-// problem-4 solving
+// // problem-4 is required only an array where will be many negative & positive values. Function will show how many negative values are there and will return it. If the input is not an array will give an error case.
 
 function findingBadData(arrayOfNumbers){
     const badData = [];
     for(let i = 0; i < arrayOfNumbers.length; i++){
         const dataPosition = i;
         const  dataValues = arrayOfNumbers[dataPosition];
-        if(dataValues < 0){
+        if(Array.isArray(arrayOfNumbers) !== true){
+            return 'ERROR: please insert an array';
+        }
+        else if (dataValues < 0){
             badData.push(dataValues);
         } 
     }return badData.length;
 }
-const array1 = findingBadData([ 1,2,5 ]);
-console.log(array1);
-const array2 = findingBadData([ 2, -5, -7, -13 ]);
-console.log(array2);
-const array3 = findingBadData([ -4, -9, -5, -33, -55 ]);
-console.log(array3);
+// const array = 'wow';
+// const array2 = findingBadData(array);
+// console.log(array2);
 
-// problem-5 solving
+
+
+// problem-5 has some fixed quantity to multiply by inputs. Then all the multiplication will be added together and if the addition is < 1000*2 addition will be returned otherwise 1000*2 will be deducted from the addition.
 
 function gemsToDiamond(quantity1, quantity2, quantity3){
     const firstFriendsGem = quantity1*21;
@@ -80,17 +89,14 @@ function gemsToDiamond(quantity1, quantity2, quantity3){
     
     const totalDiamonds = firstFriendsGem + secondFriendsGem + thirdFriendsGem;
     const diamond = totalDiamonds - 2000;
-    if(totalDiamonds < 1000*2){
-        return totalDiamonds;
+    if(typeof quantity1 !== 'number' && typeof quantity2 !== 'number' && typeof quantity3 !== 'number'){
+        return 'ERROR: please provide valid number'
+    }
+    else if(totalDiamonds < 1000*2 ){
+         return totalDiamonds;
     }
     else(totalDiamonds >= 1000*2)
-        
         return diamond;
-
 }
-const gemsQuantity1 = gemsToDiamond(1, 1, 1);
-console.log(gemsQuantity1);
-const gemsQuantity2 = gemsToDiamond(20, 200, 50);
-console.log(gemsQuantity2);
-const gemsQuantity3 = gemsToDiamond(100, 5, 1);
-console.log(gemsQuantity3);
+// const gemsQuantity =gemsToDiamond();
+// console.log(gemsQuantity);
